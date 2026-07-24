@@ -30,6 +30,16 @@ K = st.selectbox(
     "Factor K",
     [40, 20, 10]
 )
+# --- DESPLEGABLE CON LA INFORMACIÓN DEL FACTOR K ---
+with st.expander("ℹ️ ¿Cómo elegir el Factor K adecuado?"):
+    st.markdown("""
+    **El Factor K es el coeficiente de desarrollo según la FIDE:**
+    
+    * **K = 40:** Para jugadores nuevos en la lista de Elo hasta que completen eventos con al menos 30 partidas.
+    * **K = 40:** Para todos los jugadores menores de 18 años, siempre que su Elo se mantenga por debajo de 2300.
+    * **K = 20:** Para la mayoría de jugadores, mientras su Elo se mantenga por debajo de 2400.
+    * **K = 10:** Una vez que el Elo publicado de un jugador alcanza los 2400 (y se mantiene en ese nivel posteriormente, incluso si baja de 2400).
+    """)
 
 resultado = st.selectbox(
     "Resultado",
